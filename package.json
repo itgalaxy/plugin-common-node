@@ -1,0 +1,39 @@
+{
+  "name": "itgalaxy-plugin-common-node",
+  "version": "1.0.0",
+  "homepage": "https://github.com/itgalaxy/plugin-common-node",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itgalaxy/plugin-common-node.git"
+  },
+  "license": "MIT",
+  "author": "itgalaxy",
+  "scripts": {
+    "commitlint": "commitlint --from=master",
+    "prepare": "husky install",
+    "release": "standard-version --commit-all",
+    "security": "npm audit"
+  },
+  "dependencies": {
+    "@commitlint/cli": "13.2.1",
+    "@commitlint/config-conventional": "13.2.0",
+    "archiver": "5.3.0",
+    "cross-env": "7.0.3",
+    "diff": "4.0.2",
+    "husky": "7.0.4",
+    "jquery": "3.6.0",
+    "jquery-ui-bundle": "1.12.1-migrate",
+    "laravel-mix": "6.0.34",
+    "lint-staged": "11.2.3",
+    "lodash": "4.17.21",
+    "postcss": "8.3.10",
+    "prettier": "2.4.1",
+    "resolve-url-loader": "4.0.0",
+    "sass-loader": "12.2.0",
+    "standard-version": "9.3.2",
+    "toastr": "2.1.4"
+  },
+  "engines": {
+    "node": ">= 14.17.0"
+  }
+}
