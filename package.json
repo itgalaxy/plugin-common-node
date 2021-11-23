@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@commitlint/cli": "15.0.0",
-    "@commitlint/config-conventional": "14.1.0",
+    "@commitlint/config-conventional": "15.0.0",
     "archiver": "5.3.0",
     "cross-env": "7.0.3",
     "diff": "5.0.0",
