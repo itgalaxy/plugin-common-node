@@ -29,7 +29,7 @@
     "postcss": "8.4.4",
     "prettier": "2.5.1",
     "resolve-url-loader": "4.0.0",
-    "sass-loader": "12.3.0",
+    "sass-loader": "12.4.0",
     "standard-version": "9.3.2",
     "toastr": "2.1.4"
   },
