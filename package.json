@@ -24,7 +24,7 @@
     "jquery": "3.6.0",
     "jquery-ui-bundle": "1.12.1-migrate",
     "laravel-mix": "6.0.39",
-    "lint-staged": "12.1.2",
+    "lint-staged": "12.1.3",
     "lodash": "4.17.21",
     "postcss": "8.4.5",
     "prettier": "2.5.1",
