@@ -23,13 +23,9 @@
     "husky": "7.0.4",
     "jquery": "3.6.0",
     "jquery-ui-bundle": "1.12.1-migrate",
-    "laravel-mix": "6.0.39",
     "lint-staged": "12.1.7",
     "lodash": "4.17.21",
-    "postcss": "8.4.5",
     "prettier": "2.5.1",
-    "resolve-url-loader": "4.0.0",
-    "sass-loader": "12.4.0",
     "standard-version": "9.3.2",
     "toastr": "2.1.4"
   },
