@@ -23,7 +23,7 @@
     "husky": "7.0.4",
     "jquery": "3.6.0",
     "jquery-ui-bundle": "1.12.1-migrate",
-    "lint-staged": "12.3.5",
+    "lint-staged": "12.3.7",
     "lodash": "4.17.21",
     "prettier": "2.6.0",
     "standard-version": "9.3.2",
