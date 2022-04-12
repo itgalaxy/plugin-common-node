@@ -73,11 +73,11 @@ function resolveAndWriteNewVersionContent(preparedCommits) {
   const newVersionContent = [];
 
   preparedCommits.feat.forEach((commitMessage) => {
-    newVersionContent.push("<li>Feature: " + commitMessage + "</li>.");
+    newVersionContent.push("  <li>Feature: " + commitMessage + "</li>.");
   });
 
   preparedCommits.fix.forEach((commitMessage) => {
-    newVersionContent.push("<li>Fixed: " + commitMessage + "</li>.");
+    newVersionContent.push("  <li>Fixed: " + commitMessage + "</li>.");
   });
 
   const data = fs.readFileSync(pluginHtmlDescriptionFile).toString();
