@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/itgalaxy/plugin-common-node/compare/v1.0.4...v1.1.0) (2022-04-12)
+
+
+### Features
+
+* our store html changelog ([#44](https://github.com/itgalaxy/plugin-common-node/issues/44)) ([78a8d79](https://github.com/itgalaxy/plugin-common-node/commit/78a8d790836b576b7c043cb4ace5edd7bf288b80))
+
 ### [1.0.4](https://github.com/itgalaxy/plugin-common-node/compare/v1.0.3...v1.0.4) (2022-03-22)
 
 ### [1.0.3](https://github.com/itgalaxy/plugin-common-node/compare/v1.0.2...v1.0.3) (2022-01-18)
