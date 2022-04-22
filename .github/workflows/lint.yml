@@ -1,0 +1,33 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  lint:
+    name: Lint JS
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{github.event.pull_request.head.ref}}
+          fetch-depth: 0
+
+      - name: Setup Node 🔧
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          cache: "npm"
+
+      - name: Install Dependencies  🔧
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
