@@ -1,13 +1,14 @@
-module.exports.readVersion = function (contents) {
+module.exports.readVersion = function () {
   return false;
 };
 
 module.exports.writeVersion = function (contents, version) {
-  contents = contents.replace(/\* Version: .*/gm, "* Version: " + version);
-  contents = contents.replace(
+  let result = contents.replace(/\* Version: .*/gm, `* Version: ${version}`);
+
+  result = result.replace(
     /const PLUGIN_VERSION = .*;/gm,
-    "const PLUGIN_VERSION = '" + version + "';"
+    `const PLUGIN_VERSION = '${version}';`
   );
 
-  return contents;
+  return result;
 };

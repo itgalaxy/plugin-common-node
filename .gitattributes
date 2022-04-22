@@ -207,4 +207,7 @@ composer.lock -diff
 /commitlint.config.js export-ignore
 /husky.config.js export-ignore
 /lint-staged.config.js export-ignore
+/.eslintignore export-ignore
+/.eslintrc.js export-ignore
+/babel.config.js export-ignore
 

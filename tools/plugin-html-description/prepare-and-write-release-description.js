@@ -1,26 +1,27 @@
 const fs = require("fs");
 const path = require("path");
 const { exec } = require("child_process");
-const version = require(path.normalize(
-  process.cwd() + "/package.json"
-)).version;
+
+// eslint-disable-next-line import/no-dynamic-require
+const { version } = require(path.normalize(`${process.cwd()}/package.json`));
+
 const pluginHtmlDescriptionFile = path.normalize(
-  process.cwd() + "/codecanyon/html_description.html"
+  `${process.cwd()}/codecanyon/html_description.html`
 );
 
 if (!fs.existsSync(pluginHtmlDescriptionFile)) {
   console.error("error! plugin description file not found.");
 
-  return;
+  process.exit(1);
 }
 
-const gitLastCommits = exec("git log v" + version + '..HEAD --format="%s"');
+const gitLastCommits = exec(`git log v${version}..HEAD --format="%s"`);
 const commits = [];
 
 gitLastCommits.stdout.on("data", (data) => {
-  data = data.split("\n");
+  const list = data.split("\n");
 
-  data.forEach((commitMessage) => {
+  list.forEach((commitMessage) => {
     if (commitMessage.length <= 0) {
       return;
     }
@@ -73,11 +74,11 @@ function resolveAndWriteNewVersionContent(preparedCommits) {
   const newVersionContent = [];
 
   preparedCommits.feat.forEach((commitMessage) => {
-    newVersionContent.push("- Feature: " + commitMessage + ".");
+    newVersionContent.push(`- Feature: ${commitMessage}.`);
   });
 
   preparedCommits.fix.forEach((commitMessage) => {
-    newVersionContent.push("- Fixed: " + commitMessage + ".");
+    newVersionContent.push(`- Fixed: ${commitMessage}.`);
   });
 
   const data = fs.readFileSync(pluginHtmlDescriptionFile).toString();

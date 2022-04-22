@@ -1,4 +1,5 @@
 const fs = require("fs");
+
 const Diff = require("diff");
 
 const original = fs.readFileSync(".github/.release_notes.md", "utf8");
