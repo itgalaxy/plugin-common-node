@@ -29,7 +29,7 @@
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
     "husky": "8.0.2",
-    "jquery": "3.6.2",
+    "jquery": "3.6.3",
     "jquery-ui-bundle": "1.12.1-migrate",
     "lint-staged": "13.1.0",
     "lodash": "4.17.21",
