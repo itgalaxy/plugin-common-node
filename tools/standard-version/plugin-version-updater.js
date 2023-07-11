@@ -7,7 +7,7 @@ module.exports.writeVersion = function (contents, version) {
 
   result = result.replace(
     /const PLUGIN_VERSION = .*;/gm,
-    `const PLUGIN_VERSION = '${version}';`
+    `const PLUGIN_VERSION = '${version}';`,
   );
 
   return result;
