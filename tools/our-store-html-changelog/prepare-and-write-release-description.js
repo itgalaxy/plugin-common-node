@@ -6,7 +6,7 @@ const { exec } = require("child_process");
 const { version } = require(path.normalize(`${process.cwd()}/package.json`));
 
 const pluginHtmlDescriptionFile = path.normalize(
-  `${process.cwd()}/our-store/changelog.html`
+  `${process.cwd()}/our-store/changelog.html`,
 );
 
 if (!fs.existsSync(pluginHtmlDescriptionFile)) {
@@ -85,6 +85,6 @@ function resolveAndWriteNewVersionContent(preparedCommits) {
 
   fs.writeFileSync(
     pluginHtmlDescriptionFile,
-    data.replace("##NEW_VERSION_CONTENT##", newVersionContent.join("\n"))
+    data.replace("##NEW_VERSION_CONTENT##", newVersionContent.join("\n")),
   );
 }

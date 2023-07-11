@@ -5,7 +5,7 @@ const path = require("path");
 const { version } = require(path.normalize(`${process.cwd()}/package.json`));
 
 const pluginHtmlDescriptionFile = path.normalize(
-  `${process.cwd()}/codecanyon/html_description.html`
+  `${process.cwd()}/codecanyon/html_description.html`,
 );
 
 if (!fs.existsSync(pluginHtmlDescriptionFile)) {
@@ -18,5 +18,5 @@ const data = fs.readFileSync(pluginHtmlDescriptionFile).toString();
 
 fs.writeFileSync(
   pluginHtmlDescriptionFile,
-  data.replace("##NEW_VERSION##", version)
+  data.replace("##NEW_VERSION##", version),
 );
