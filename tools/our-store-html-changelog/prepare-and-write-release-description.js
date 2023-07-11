@@ -27,10 +27,9 @@ gitLastCommits.stdout.on("data", (data) => {
     }
 
     if (
-      !commitMessage.startsWith("feat:") &&
-      !commitMessage.startsWith("feat(") &&
-      !commitMessage.startsWith("fix:") &&
-      !commitMessage.startsWith("fix(")
+      !commitMessage.startsWith("feat") &&
+      !commitMessage.startsWith("fix") &&
+      commitMessage.indexOf("!:") === -1
     ) {
       return;
     }
@@ -47,23 +46,20 @@ function prepareCommitByType() {
   const preparedCommits = {
     feat: [],
     fix: [],
+    chore: [],
   };
 
   commits.forEach((commitMessage) => {
-    if (commitMessage.startsWith("feat:")) {
-      preparedCommits.feat.push(commitMessage.split("feat: ")[1]);
+    if (commitMessage.startsWith("feat")) {
+      preparedCommits.feat.push(commitMessage.split(": ")[1]);
     }
 
-    if (commitMessage.startsWith("feat(")) {
-      preparedCommits.feat.push(commitMessage.split("): ")[1]);
+    if (commitMessage.startsWith("fix")) {
+      preparedCommits.fix.push(commitMessage.split(": ")[1]);
     }
 
-    if (commitMessage.startsWith("fix:")) {
-      preparedCommits.fix.push(commitMessage.split("fix: ")[1]);
-    }
-
-    if (commitMessage.startsWith("fix(")) {
-      preparedCommits.fix.push(commitMessage.split("): ")[1]);
+    if (commitMessage.startsWith("chore")) {
+      preparedCommits.chore.push(commitMessage.split(": ")[1]);
     }
   });
 
@@ -79,6 +75,10 @@ function resolveAndWriteNewVersionContent(preparedCommits) {
 
   preparedCommits.fix.forEach((commitMessage) => {
     newVersionContent.push(`  <li>Fixed: ${commitMessage}.</li>`);
+  });
+
+  preparedCommits.chore.forEach((commitMessage) => {
+    newVersionContent.push(`  <li>Chore: ${commitMessage}.</li>`);
   });
 
   const data = fs.readFileSync(pluginHtmlDescriptionFile).toString();
