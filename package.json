@@ -18,7 +18,7 @@
     "security": "npm audit"
   },
   "dependencies": {
-    "@babel/preset-env": "7.23.6",
+    "@babel/preset-env": "7.23.8",
     "@commitlint/cli": "18.4.3",
     "@commitlint/config-conventional": "18.4.3",
     "@webpack-contrib/eslint-config-webpack": "3.0.0",
