@@ -13,7 +13,7 @@
     "lint:prettier": "prettier --list-different .",
     "lint:js": "eslint --cache .",
     "lint": "npm-run-all -l -p \"lint:**\"",
-    "prepare": "husky install",
+    "prepare": "husky",
     "release": "standard-version --commit-all",
     "security": "npm audit"
   },
