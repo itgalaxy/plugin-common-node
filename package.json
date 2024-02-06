@@ -13,7 +13,7 @@
     "lint:prettier": "prettier --list-different .",
     "lint:js": "eslint --cache .",
     "lint": "npm-run-all -l -p \"lint:**\"",
-    "prepare": "husky install",
+    "prepare": "husky",
     "release": "standard-version --commit-all",
     "security": "npm audit"
   },
@@ -28,7 +28,7 @@
     "eslint": "8.56.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.29.1",
-    "husky": "8.0.3",
+    "husky": "9.0.10",
     "jquery": "3.7.1",
     "jquery-ui-bundle": "1.12.1-migrate",
     "lint-staged": "15.2.0",
