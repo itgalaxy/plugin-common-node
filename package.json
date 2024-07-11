@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@babel/preset-env": "7.23.9",
-    "@commitlint/cli": "18.6.1",
+    "@commitlint/cli": "19.3.0",
     "@commitlint/config-conventional": "18.6.2",
     "@webpack-contrib/eslint-config-webpack": "3.0.0",
     "archiver": "7.0.1",
