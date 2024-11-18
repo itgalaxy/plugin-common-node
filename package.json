@@ -28,7 +28,7 @@
     "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.31.0",
-    "husky": "9.1.6",
+    "husky": "9.1.7",
     "jquery": "3.7.1",
     "jquery-ui-bundle": "1.12.1-migrate",
     "lint-staged": "15.2.10",
