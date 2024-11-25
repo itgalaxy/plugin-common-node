@@ -20,7 +20,7 @@
   "dependencies": {
     "@babel/preset-env": "7.25.8",
     "@commitlint/cli": "19.5.0",
-    "@commitlint/config-conventional": "19.5.0",
+    "@commitlint/config-conventional": "19.6.0",
     "@webpack-contrib/eslint-config-webpack": "3.0.0",
     "archiver": "7.0.1",
     "cross-env": "7.0.3",
